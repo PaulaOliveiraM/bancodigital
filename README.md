@@ -10,7 +10,7 @@ Pré-requisitos:
 Instruções:
 1. Acessar a pasta que contém o arquivo *.sln do projeto e executar o comando:
 	
-	````
+	```
 	docker-compose up -d
 	```	
 2. Após finalizado o comando anterior, abra o browser e acesse a seguinte URL:
