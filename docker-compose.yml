@@ -1,0 +1,30 @@
+version: '3'
+
+services:
+  mongo:
+    container_name: mongo
+    image: mongo
+    volumes:
+      - ./data:/data/db
+    ports:
+      - "27017:27017"
+    networks:
+      - bancodigital-network
+
+  web:
+        ports:
+            - "10000:80"
+            - "10001:443"
+        build: .
+        depends_on:
+            - mongo
+        links:
+          - mongo
+        environment:
+            - ASPNETCORE_URLS=https://+;http://+;
+        networks:
+            - bancodigital-network
+            
+networks: 
+    bancodigital-network:
+        driver: bridge

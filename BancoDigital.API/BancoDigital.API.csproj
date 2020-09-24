@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <DockerLaunchAction>LaunchBrowser</DockerLaunchAction>
+    <UserSecretsId>a29744e0-7357-4e50-9fbb-fcd7b22c3838</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="GraphQL" Version="2.4.0" />
+    <PackageReference Include="GraphQL.Server.Transports.AspNetCore" Version="3.4.0" />
+    <PackageReference Include="GraphQL.Server.Ui.Playground" Version="3.4.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.10.9" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BancoDigital.Repository\BancoDigital.Repository.csproj" />
+    <ProjectReference Include="..\BancoDigital.Service\BancoDigital.Service.csproj" />
+  </ItemGroup>
+
+
+</Project>
